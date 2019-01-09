@@ -1,1 +1,25 @@
-Company,Address,Station,,"""Silicon Alley"" ",Flatiron District,23 ST,,Google,"Google Building 8510 85 10th Ave, New York, NY 10011",14 St,,Facebook,"770 Broadway (at E 9th St), New York, NY 10003",14 ST-UNION SQ,,Bloomberg,"731 Lexington Ave, New York, NY 10022",LEXINGTON AV/63,,CA Technologies,"520 Madison Ave, New York, NY 10022",53 ST,,Vice Media,"97 North Tenth Street Brooklyn,¾NY¾11211",BEDFORD AV,,Blue Apron,"40 W 23rd St, New York, NY 10010",7 Av,,E Trade,"1345 6th Ave, New York, NY 10105",57 St,,BuzzFeed,225 Park Avenue,GRD CNTRL-42 ST,,NYU,"44 West 4th Street, New York, NY 10012",8 ST-NYU,,Oath Media,"770 Broadway, 4th-6th & 9th floors, New York, NY 10003",W 4 ST-WASH SQ,,JP Morgan,"270 Park Ave, New York, NY 10017",51 St,,Wall Street,"44 Wall St, New York, NY 10005",WALL ST,,NYSE,"11 Wall St, New York, NY 10005",BROAD ST,,Whole Foods,"270 Greenwich St, New York, NY 10007",CHAMBERS ST,,Flexport,111 West 19th Street,18 ST,,SquareSpace,"8 Clarkson St, New York, NY 10014",HOUSTON ST,,Peloton,"125 W 25th St, New York",28 ST,,Fed Reserve Bank of NY,,FULTON ST,,,,34 ST-PENN STA,,,,ASTOR PL,,,,42 ST-BRYANT PK,,,,9TH STREET,,,,5 AVE,,
+ï»¿Company,Address,Station
+"""Silicon Alley"" ",Flatiron District,23 ST
+Google,"Google Building 8510 85 10th Ave, New York, NY 10011",14 St
+Facebook,"770 Broadway (at E 9th St), New York, NY 10003",14 ST-UNION SQ
+Bloomberg,"731 Lexington Ave, New York, NY 10022",LEXINGTON AV/63
+CA Technologies,"520 Madison Ave, New York, NY 10022",53 ST
+Vice Media,"97 North Tenth Street Brooklyn,Ã¦NYÃ¦11211",BEDFORD AV
+Blue Apron,"40 W 23rd St, New York, NY 10010",7 Av
+E Trade,"1345 6th Ave, New York, NY 10105",57 St
+BuzzFeed,225 Park Avenue,GRD CNTRL-42 ST
+NYU,"44 West 4th Street, New York, NY 10012",8 ST-NYU
+Oath Media,"770 Broadway, 4th-6th & 9th floors, New York, NY 10003",W 4 ST-WASH SQ
+JP Morgan,"270 Park Ave, New York, NY 10017",51 St
+Wall Street,"44 Wall St, New York, NY 10005",WALL ST
+NYSE,"11 Wall St, New York, NY 10005",BROAD ST
+Whole Foods,"270 Greenwich St, New York, NY 10007",CHAMBERS ST
+Flexport,111 West 19th Street,18 ST
+SquareSpace,"8 Clarkson St, New York, NY 10014",HOUSTON ST
+Peloton,"125 W 25th St, New York",28 ST
+Fed Reserve Bank of NY,,FULTON ST
+,,34 ST-PENN STA
+,,ASTOR PL
+,,42 ST-BRYANT PK
+,,9TH STREET
+,,5 AVE
