@@ -24,9 +24,6 @@ def read_mta_file(path, pickle_ok=True):
     our_rows = raw_data[(raw_data.Date >= '04/01/2018') & 
                      (raw_data.Date < '06/22/2018')]
     spring = our_rows.copy()
-    
-    raw_data = 0 # to free memory?
-    
     assert(spring.shape[0] == 2307938)
     
     # strip the Exists column name
@@ -36,7 +33,7 @@ def read_mta_file(path, pickle_ok=True):
     spring['ts_id'] = spring.Unit + '_' + spring.SCP
         
     spring['date_time'] = pd.to_datetime(spring.Date + ' ' + spring.Time, format="%m/%d/%Y %X")
-    spring['bweekday'] = spring.date_time.dt.weekday < 5
+    spring['b_weekday'] = spring.date_time.dt.weekday < 5
     
     spring = spring.drop(columns=['Date', 'Time', 'Division', 'Line Name'])    
     spring.to_pickle("spring.pickle")
