@@ -35,7 +35,7 @@ def read_delta_data(path, pickle_ok=True):
         except:
             pass
 
-    data = read_mta_file(path, pickle_ok)
+    data = read_mta_file(path, pickle_ok=pickle_ok)
 
     # We cannot roll before we sort! 
     # Sort first by station, then by turnstile, then by date
