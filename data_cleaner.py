@@ -42,11 +42,11 @@ def read_mta_file(path, pickle_ok=True):
     
    # Create entry/exit/time deltas for each day
     spring.sort_values(['Station', 'ts_id', 'date_time'], inplace=True)
-    spring['entry_delta'] = spring.groupby(['Station', 'ts_id', 'Weekday'])['Entries'].diff().fillna(0)
-    spring['exit_delta'] = spring.groupby(['Station', 'ts_id', 'Weekday'])['Exits'].diff().fillna(0)
-    spring['time_delta'] = spring.groupby(['Station', 'ts_id', 'Weekday'])['date_time'].diff().fillna(0)
-    
-    spring = spring.drop(columns=['Date', 'Time', 'Division', 'Line Name', 'Entries', 'Exits'])        
+    spring['entry_delta'] = spring.groupby(['Station', 'ts_id', 'Date'])['Entries'].diff().fillna(0)
+    spring['exit_delta'] = spring.groupby(['Station', 'ts_id', 'Date'])['Exits'].diff().fillna(0)
+    spring['time_delta'] = spring.groupby(['Station', 'ts_id', 'Date'])['date_time'].diff().fillna(0)
+
+    spring = spring.drop(columns=['Time', 'Division', 'Line Name', 'Entries', 'Exits'])   
     spring.to_pickle("spring.pickle")
     
     return spring
