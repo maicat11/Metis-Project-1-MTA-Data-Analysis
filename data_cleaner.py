@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import calendar
 
 def read_mta_file(path, pickle_ok=True):
     """Read the raw MTA turnstyle data and return a dataframe cleaned up as follows -
@@ -34,6 +35,10 @@ def read_mta_file(path, pickle_ok=True):
         
     spring['date_time'] = pd.to_datetime(spring.Date + ' ' + spring.Time, format="%m/%d/%Y %X")
     spring['b_weekday'] = spring.date_time.dt.weekday < 5
+
+    # convert date_time to weekday
+    day_convert = lambda x: calendar.day_name[x.weekday()]
+    transit['Weekday'] = transit['date_time'].apply(day_convert)
     
     spring = spring.drop(columns=['Date', 'Time', 'Division', 'Line Name'])    
     spring.to_pickle("spring.pickle")
