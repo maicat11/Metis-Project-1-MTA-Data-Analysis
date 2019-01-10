@@ -29,11 +29,11 @@ def read_delta_data(path, pickle_ok=True):
     deltas calculated"""
 
     if pickle_ok:
-    try:
-        data = pd.read_pickle("delta.pickle")
-        return data
-    except:
-        pass
+        try:
+            data = pd.read_pickle("delta.pickle")
+            return data
+        except:
+            pass
 
     data = read_mta_file(path, pickle_ok)
 
