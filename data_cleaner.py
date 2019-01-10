@@ -40,7 +40,14 @@ def read_mta_file(path, pickle_ok=True):
     day_convert = lambda x: calendar.day_name[x.weekday()]
     transit['Weekday'] = transit['date_time'].apply(day_convert)
     
-    spring = spring.drop(columns=['Date', 'Time', 'Division', 'Line Name'])    
+   # Create entry/exit deltas for each day
+    spring.sort_values(['Station', 'ts_id', 'date_time'], inplace=True)
+    spring['entry_delta'] = spring.groupby(['Station', 'ts_id', 'Weekday'])['Entries'].diff()
+    spring['exit_delta'] = spring.groupby(['Station', 'ts_id', 'Weekday'])['Exits'].diff()
+    spring['entry_delta'] = spring['entry_delta'].fillna(0)
+    spring['exit_delta'] = spring['exit_delta'].fillna(0)
+    
+    spring = spring.drop(columns=['Date', 'Time', 'Division', 'Line Name', 'Entries', 'Exits'])        
     spring.to_pickle("spring.pickle")
     
     return spring
