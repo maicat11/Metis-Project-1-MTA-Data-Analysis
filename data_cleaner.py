@@ -38,7 +38,7 @@ def read_mta_file(path, pickle_ok=True):
 
     # convert date_time to weekday
     day_convert = lambda x: calendar.day_name[x.weekday()]
-    transit['Weekday'] = transit['date_time'].apply(day_convert)
+    spring['Weekday'] = spring['date_time'].apply(day_convert)
     
     spring = spring.drop(columns=['Date', 'Time', 'Division', 'Line Name'])    
     spring.to_pickle("spring.pickle")
