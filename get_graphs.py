@@ -105,7 +105,7 @@ def heatmap_entries(df, station=None):
     days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
     data_by_week = pd.DataFrame(data_by_week_dict, index = days)
     
-    fig, ax = plt.subplots(figsize=(10,5))
+    fig, ax = plt.subplots(figsize=(15,4))
     sns.heatmap(data_by_week, ax=ax, cmap='Reds', linewidths=1, linecolor='ivory');
    
     
