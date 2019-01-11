@@ -25,6 +25,17 @@ def read_delta_data(path, pickle_ok=True):
             pass
 
     data = read_mta_file(path, pickle_ok=pickle_ok)
+    
+    # filter dataset down to only the target stations
+    target_stations = ['23 ST', '14 ST', '14 ST-UNION SQ', 
+                       'LEXINGTON AV/63', '53 ST', 'BEDFORD AV', 
+                       '7 AV', '57 ST', 'GRD CNTRL-42 ST', '8 ST-NYU', 
+                       'W 4 ST-WASH SQ', '51 ST', 'WALL ST', 'BROAD ST', 
+                       'CHAMBERS ST', '18 ST', 'HOUSTON ST', '28 ST', 
+                       'FULTON ST', '34 ST-PENN STA', 'ASTOR PL', 
+                       '42 ST-BRYANT PK', '9TH STREET', '5 AVE']
+    data = data[data['Station'].isin(target_stations)]
+
 
     # drop time intervals that are too small (3 minutes or less, based on inspection)
     too_small = pd.Timedelta(minutes=3)
@@ -50,8 +61,8 @@ def read_delta_data(path, pickle_ok=True):
     # numbers were clearly bogus, then rounded up generously 
     # data.entry_delta.quantile(q=.00009)
     # data.entry_delta.quantile(q=.99995)
-    bogus_entry = data.query('(entry_delta < -5000) or (entry_delta > 5000)')
-    bogus_exit = data.query('(exit_delta < -5000) or (exit_delta > 5000)')
+    bogus_entry = data.query('(entry_delta < -4500) or (entry_delta > 4500)')
+    bogus_exit = data.query('(exit_delta < -4500) or (exit_delta > 4500)')
 
     data.loc[bogus_entry.index, 'entry_delta'] = np.nan
     data.loc[bogus_exit.index, 'exit_delta'] = np.nan
