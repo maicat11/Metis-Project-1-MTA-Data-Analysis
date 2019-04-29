@@ -3,4 +3,5 @@ data/
 Project1_TurnstileDataAnalysis.ipynb
 .ipynb_checkpoints/
 __pycache__/
-.pickle
+delta.pickle/
+spring.pickle/
