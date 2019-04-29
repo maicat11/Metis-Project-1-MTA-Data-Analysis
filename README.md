@@ -1,4 +1,5 @@
 # Metis-Project-1-MTA-Data-Analysis
+A collaboration effort to do exploratory data analysis and determine a solution to the above proposed problem.  
 
 Project 1 of Metis Data Science Bootcamp. Problem statement below:
 
@@ -7,8 +8,9 @@ WomenTechWomenYes(WTWY) is interested in harnessing the power of data and analyt
 Where we’d like to solicit your engagement is to use MTA subway data, which as I’m sure you know is available freely from the city, to help us optimize the placement of our street teams, such that we can gather the most signatures, ideally from those who will attend the gala and contribute to our cause.
 
 
-Colaboration effort to do exploratory data analysis and determine a solution to the above proposed problem.  
-
 # Data location 
 
 https://catalog.data.gov/dataset/turnstile-usage-data-2018/resource/23d93dcf-546e-42e4-8a37-c214362e2f4c
+
+
+## Conclusions
